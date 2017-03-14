@@ -5,7 +5,7 @@ Takes a screenshot of selected area and saves it to disk
 ```sh
 $ npm install screenshot-node
 ```
-#Methods
+# Methods
 ---
 call the module
 ```javascript
