@@ -1,6 +1,6 @@
 {
   "name": "screenshot-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Takes a screenshot of selected area and saves it to disk",
   "main": "index.js",
   "repository": {
