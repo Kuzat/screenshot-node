@@ -2,7 +2,7 @@
 ---
 Takes a screenshot of selected area and saves it to disk.
 
-# LINUX VERSION ONLY. MAC PLANNED FOR VERSION 1.1.0 AND WINDOWS FOR 1.2.0
+# LINUX AND MAC VERSION ONLY. WINDOWS FOR 1.2.0
 
 ## Instalation
 ```sh
