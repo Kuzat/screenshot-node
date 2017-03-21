@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <X11/X.h>
 #include <X11/Xutil.h>
-#include "prtscn.h"
+#include "prtscn_linux.h"
 #include "png.h"
 
 static int save_png_to_file (XImage * image, const char* path)

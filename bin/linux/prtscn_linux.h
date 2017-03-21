@@ -1,5 +1,5 @@
-#ifndef PRTSCN_H_
-#define PRTSCN_H_
+#ifndef PRTSCN_LINUX_H_
+#define PRTSCN_LINUX_H_
 
 #ifdef __cplusplus
 extern "C" {

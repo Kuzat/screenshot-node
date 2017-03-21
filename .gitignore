@@ -35,3 +35,12 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+#Osx folder dot file
+.DS_Store
+
+# node-gyp build directory
+build
+
+# Images from test
+*.png

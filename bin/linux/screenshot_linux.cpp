@@ -1,5 +1,5 @@
 #include <nan.h>
-#include "prtscn.h"
+#include "prtscn_linux.h"
 #include <stdlib.h>
 #include <X11/Xutil.h>
 
