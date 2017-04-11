@@ -8,7 +8,7 @@ extern "C" {
 
 /* structure to store PNG image bytes */
 
-void getScreen(const int, const int, const int, const int, const char*);
+void getScreen(const int, const int, int, int, const char*);
 
 #ifdef __cplusplus
 }
