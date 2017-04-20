@@ -2,7 +2,7 @@
 ---
 Takes a screenshot of selected area and saves it to disk.
 
-# LINUX AND MAC VERSION ONLY. WINDOWS FOR 1.2.0
+# Linux, OS X and Windows all supported now.
 
 ## Instalation
 ```sh
@@ -23,6 +23,7 @@ The x and y coordinates for the top left corner of the picture.
 #### width, height
 ##### Must be whole numbers.
 The width and height of the screenshot in pixels.
+##### Set width and height as 0 to take a fullscreen screenshot
 
 #### path
 ##### Must be a string
@@ -32,11 +33,9 @@ The path including name of the file you want the screenshot to be saved as.
 A string with error message. Null if there are no error.
 
 #### example
-Takes a screenshot from top left corner that have a width and height of 100. Saves it in the current directory name "image.png".
+Takes a screenshot from top left corner that have a width and height of 100. Saves it in the current directory with the name "image.png".
 ```javascript
 screenshot.saveScreenshot(0, 0, 100, 100, "image.png", (err) => {
     if(err) console.log(err);
 }
 ```
-# INFO
-At the moment this is only working on linux and only tested on ubuntu 16.04
