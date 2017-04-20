@@ -44,3 +44,7 @@ build
 
 # Images from test
 *.png
+
+# Visual studio files and directories
+.vs
+x64

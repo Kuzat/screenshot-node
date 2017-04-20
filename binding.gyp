@@ -7,7 +7,7 @@
             ],
             "conditions": [
                 ['OS=="linux"', {
-                    "sources": ["bin/linux/screenshot_linux.cpp", "bin/linux/prtscn_linux.c"],
+                    "sources": ["src/linux/screenshot_linux.cpp", "src/linux/prtscn_linux.c"],
                     "link_settings": {
                         "libraries": [
                             "-lX11",
@@ -22,7 +22,7 @@
                             '-ObjC++'
                         ]
                     },
-                    "sources": ["bin/osx/screenshot_osx.cpp", "bin/osx/prtscn_osx.mm"],
+                    "sources": ["src/osx/screenshot_osx.cpp", "src/osx/prtscn_osx.mm"],
                     "link_settings": {
                         "libraries": [
                             "-framework CoreGraphics",
@@ -31,6 +31,9 @@
                             "-framework Foundation"
                         ]
                     }
+                }],
+                ['OS=="win"', {
+                    "sources": ["src/windows/screenshot_windows.cpp", "src/windows/prtscn_windows.cpp"]
                 }]
             ]
         }
