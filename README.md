@@ -1,4 +1,4 @@
-# screenshot-node
+# screenshot-node [![npm](https://img.shields.io/npm/dt/screenshot-node.svg?style=flat-square)](https://www.npmjs.com/package/screenshot-node)
 ---
 Takes a screenshot of selected area and saves it to disk.
 
@@ -9,7 +9,7 @@ Takes a screenshot of selected area and saves it to disk.
 $ npm install screenshot-node
 ```
 # Methods
----
+----
 call the module
 ```javascript
 var screenshot = require('screenshot-node');
