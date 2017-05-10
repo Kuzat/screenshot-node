@@ -66,7 +66,7 @@ void getScreen(const int x, const int y, int W, int H, const char* path) {
 		SelectObject(hDest, hbDesktop);
 
 		// copy from the desktop device context to the bitmap device context
-		BitBlt(hDest, x, y, W, H, hdc, 0, 0, SRCCOPY);
+		BitBlt(hDest, 0, 0, W, H, hdc, x, y, SRCCOPY);
 
 		Bitmap bitmap(hbDesktop, NULL);
 		CLSID clsid;
