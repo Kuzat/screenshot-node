@@ -35,4 +35,5 @@ void getScreen(const int x, const int y, int W, int H, const char* path) {
 	CGRect rect = CGRectMake(x, y, W, H);
 	CGImageRef image_ref = CGDisplayCreateImageForRect(CGMainDisplayID(), rect);
 	CGImageWriteToFile(image_ref, [NSString stringWithUTF8String:path]);
+	CGImageRelease(image_ref);
 }
