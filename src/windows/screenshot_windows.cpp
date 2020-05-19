@@ -6,6 +6,7 @@ using namespace v8;
 
 void Method(const FunctionCallbackInfo<Value>& args) {
 	Isolate* isolate = args.GetIsolate();
+	v8::Local<v8::Context> context = isolate->GetCurrentContext();
 
 
 	// Check number of arguments passed
@@ -20,17 +21,21 @@ void Method(const FunctionCallbackInfo<Value>& args) {
 		return;
 	}
 
-	int x = args[0]->NumberValue();
-	int y = args[1]->NumberValue();
-	int width =  args[2]->NumberValue();
-	int height = args[3]->NumberValue();
+	int x = args[0]->NumberValue(context).FromJust();
+	int y = args[1]->NumberValue(context).FromJust();
+	int width =  args[2]->NumberValue(context).FromJust();
+	int height = args[3]->NumberValue(context).FromJust();;
+	
+	Nan::Utf8String param1(args[4]->ToString(context).ToLocalChecked());
+    std::string value = std::string(*param1);
 
 	getScreen(x, y, width, height, *String::Utf8Value(args[4]));
 
 	//Performe the operation
-	Local<Function> cb = Local<Function>::Cast(args[5]);
+	v8::Local<v8::Function> cb = Local<Function>::Cast(args[5]);
 	Local<Value> argv[1] = {Null(isolate)};
-	cb->Call(Null(isolate), 1, argv);
+	Nan::Callback callback(cb);
+	callback.Call(1,argv);
 }
 
 void Init(Local<Object> exports, Local<Object> module) {
