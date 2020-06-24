@@ -21,6 +21,6 @@
   "license": "MIT",
   "gypfile": true,
   "dependencies": {
-    "nan": "^2.5.1"
+    "nan": "^2.14.1"
   }
 }
